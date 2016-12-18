@@ -1,0 +1,24 @@
+<html>
+<head>
+</head>
+<body>
+<button onclick="spacing()">格式化</button>&emsp;<span></span>
+<textarea style="margin-top: 10px;width:100%;height:100%;">
+    
+</textarea>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/3.2.1/pangu.js"></script>
+<script type="text/javascript">
+function spacing() {
+    var content=document.getElementsByTagName("textarea")[0].innerHTML,
+    oldLen=content.length,
+    span=document.getElementsByTagName("span")[0];
+    console.log("原长:"+oldLen);
+    content=pangu.spacing(content);
+    console.log("现长:"+content.length);
+    console.log("增加:"+(content.length-oldLen));
+    document.getElementsByTagName("textarea")[0].innerHTML=content;
+    span.innerHTML="原长:"+oldLen+"&emsp;现长:"+content.length+"&emsp;增加:"+(content.length-oldLen);
+}
+</script>
+</html>
