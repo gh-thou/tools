@@ -15,7 +15,7 @@
         content = pangu.spacing(content);
         console.log("现长:" + content.length);
         console.log("增加:" + (content.length - oldLen));
-        document.getElementsByTagName("textarea")[0].innerHTML = content;
+        document.getElementsByTagName("textarea")[0].value = content;
         span.innerHTML = "原长:" + oldLen + "&emsp;现长:" + content.length + "&emsp;增加:" + (content.length - oldLen);
     }
 </script>
