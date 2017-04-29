@@ -8,7 +8,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/3.2.1/pangu.js"></script>
 <script type="text/javascript">
     function spacing() {
-        var content = document.getElementsByTagName("textarea")[0].innerHTML,
+        var content = document.getElementsByTagName("textarea")[0].value,
                 oldLen = content.length,
                 span = document.getElementsByTagName("span")[0];
         console.log("原长:" + oldLen);
